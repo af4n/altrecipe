@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+	<div class="home">
+		<h1>Todo list</h1>
+		<todo-form />
+		<list />
+	</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+  import TodoForm from "@/components/TodoForm.vue";
+  import List from "@/components/List.vue";
 
-export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-  },
-};
+  export default {
+    name: "Home",
+    components: {
+      TodoForm, List
+    },
+  };
 </script>
+
+<style lang="scss">
+	.home {
+		display: block;
+		max-width: 600px;
+		margin: 100px auto;
+	}
+</style>
